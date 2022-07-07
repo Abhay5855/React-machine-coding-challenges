@@ -1,6 +1,6 @@
 
 import './App.css';
-import Parent from "./react-practice/child-parent-update/Parent"
+// import Parent from "./react-practice/child-parent-update/Parent"
 import Todo from "./react-practice/todo/Todo";
 import Counter from "./react-practice/counter/Counter";
 import MultiStep from "./react-practice/multi-step-form/index";
