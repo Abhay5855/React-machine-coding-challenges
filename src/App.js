@@ -2,6 +2,7 @@
 import './App.css';
 import Parent from "./react-practice/child-parent-update/Parent"
 import Todo from "./react-practice/todo/Todo";
+import Counter from "./react-practice/counter/Counter";
 
 function App() {
   return (
@@ -11,7 +12,10 @@ function App() {
       {/* <Parent /> */}
 
 
-      <Todo />
+      {/* <Todo /> */}
+
+
+      <Counter />
     
     </div>
   );
