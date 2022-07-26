@@ -2,8 +2,9 @@
 import './App.css';
 // import Parent from "./react-practice/child-parent-update/Parent"
 import Todo from "./react-practice/todo/Todo";
-import Counter from "./react-practice/counter/Counter";
 import MultiStep from "./react-practice/multi-step-form/index";
+import Counter from './counter/Counter';
+
 function App() {
   return (
     <div className="App">
@@ -17,7 +18,15 @@ function App() {
 
       {/* <Counter /> */}
 
-       <MultiStep />
+       {/* <MultiStep /> */}
+
+       {/* <UndoableCounter /> */}
+
+       {/* <Memes /> */}
+
+       {/* <TodoCrud /> */}
+
+       <Counter />
     
     </div>
   );
