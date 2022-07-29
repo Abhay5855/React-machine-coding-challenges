@@ -4,8 +4,8 @@ import './App.css';
 import Todo from "./react-practice/todo/Todo";
 import MultiStep from "./react-practice/multi-step-form/index";
 import Counter from './counter/Counter';
-import TodoUI from './todoapp-redux/TodoUI';
-import TodoList from './todoapp-redux/TodoList';
+
+import Calculator from './redux-practice/Calculator';
 
 function App() {
   return (
@@ -30,9 +30,11 @@ function App() {
 
        {/* <Counter /> */}
 
-       <TodoUI />
+       {/* <TodoUI />
 
-       <TodoList />
+       <TodoList /> */}
+
+       <Calculator />
     
     </div>
   );

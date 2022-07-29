@@ -1,4 +1,4 @@
-import { ADDTODO, DECREMENT, DELETETODO, INCREMENT } from "../action_constants/actionConstants"
+import { ADDTODO, DECREMENT, DELETETODO, INCREMENT, UPDATETIP, ADDITEM } from "../action_constants/actionConstants"
 
 
 // Actions for counter example
@@ -46,4 +46,23 @@ export const DeleteTodo = (id) => {
               type : DELETETODO,
               payload : id,
        }
+}
+
+
+export const UpdateTip = () => {
+
+         return {
+
+              type : UPDATETIP
+         }
+}
+
+
+export const additem = (data) => {
+
+         return {
+
+              type : ADDITEM,
+              payload : data,
+         }
 }

@@ -11,3 +11,8 @@ export const ADDTODO = 'ADDTODO';
 
 export const DELETETODO = 'DELETETODO';
 
+export const UPDATETIP = 'UPDATETIP';
+
+
+export const ADDITEM = 'ADDITEM';
+
