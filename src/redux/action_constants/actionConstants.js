@@ -16,3 +16,7 @@ export const UPDATETIP = 'UPDATETIP';
 
 export const ADDITEM = 'ADDITEM';
 
+
+// Ecommerse 
+
+export const ADDAUTH = 'ADDAUTH';

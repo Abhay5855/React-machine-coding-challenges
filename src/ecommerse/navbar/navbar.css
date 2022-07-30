@@ -1,0 +1,79 @@
+
+
+
+:root {
+
+      --link : #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home__tag {
+
+color : var(--link);
+display : flex;
+align-items: center;
+gap : 1rem;
+margin-right: auto;
+
+
+}
+
+.home__tag > img {
+
+      width : 5em;
+}
+
+.nav {
+
+    display: flex;
+    margin-left: auto;
+    
+}
+
+.cart {
+
+    margin-right: 2rem;
+
+}
+.user {
+
+     
+}
+
+.heart {
+
+      margin-right: 2rem;
+}
+
+
+@media  (max-width : 600px){
+
+    
+.cart {
+
+    display : none;
+}
+
+
+.user {
+    
+    display: none;
+     
+}
+
+.heart {
+
+      display: none;
+}
+
+
+
+
+
+
+
+      
+}

@@ -6,35 +6,17 @@ import MultiStep from "./react-practice/multi-step-form/index";
 import Counter from './counter/Counter';
 
 import Calculator from './redux-practice/Calculator';
+import Routes from './routes/Routes';
 
 function App() {
   return (
     <div className="App">
 
 
-      {/* <Parent /> */}
+
+      <Routes />
 
 
-      {/* <Todo /> */}
-
-
-      {/* <Counter /> */}
-
-       {/* <MultiStep /> */}
-
-       {/* <UndoableCounter /> */}
-
-       {/* <Memes /> */}
-
-       {/* <TodoCrud /> */}
-
-       {/* <Counter /> */}
-
-       {/* <TodoUI />
-
-       <TodoList /> */}
-
-       <Calculator />
     
     </div>
   );
