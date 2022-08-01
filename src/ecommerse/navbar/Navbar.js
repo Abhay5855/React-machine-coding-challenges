@@ -45,7 +45,7 @@ const Navbar = () => {
 export default Navbar
 
 const Nav = styled.div`
-  background: #000;
+  background-color: #2D2E45;
   color: #fff;
   width: 100%;
   padding: 1.25rem 5rem;

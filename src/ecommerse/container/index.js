@@ -9,7 +9,8 @@ const Container = () => {
   return (
     <div >
         <Navbar />
-
+          
+        
         <LandingPage />
     </div>
   )

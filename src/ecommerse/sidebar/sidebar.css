@@ -1,0 +1,47 @@
+
+
+.filterbtn__tab {
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+
+.clear__btn {
+
+      outline: none;
+      border: none;
+      padding : 0.35em 1.3em;
+      border-radius: 0.375em;
+      text-align: center;
+      cursor: pointer;
+      background-color: #6302C5;
+      color: #fff;
+}
+
+.filter__text{
+
+    font-weight: bold;
+}
+
+
+.hr__line {
+
+       border: none;
+       background: #fff;
+       height: .15rem;
+       margin: 1.5rem  0;
+}
+
+.sort {
+
+    display: flex;
+    align-items: center;
+    margin: 0.5em 0;
+}
+
+.sort > input {
+
+      margin-right: 0.75em;
+}
+

@@ -21,7 +21,7 @@ const Input = styled.input`
 
 outline : none;
 border : none;
-width : 30vh;
+
 
 `
 
@@ -29,16 +29,18 @@ const InputContainer = styled.div`
 
 display : flex;
 align-items : center;
+justify-content : space-between;
 border-radius : 5px;
 padding : 0.5em;
 height : fit-content;
 background : #fff;
-
+width : 20vw;
 
 @media (max-width : 600px){
 
     width : 100%;
     justify-content : space-between;
+
     
 }
 

@@ -1,48 +1,63 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Sidebar from "../sidebar/Sidebar";
+import "./landing.css";
+import { DiscountedPrice } from "../utils/DiscountedPrice";
+import { data } from "../data/data";
 
 const LandingPage = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(data);
   const [loading, setLoading] = useState(false);
 
-  function fetchProducts() {
-    setLoading(true);
-    axios
-      .get("https://fakestoreapi.com/products?limit=30")
-      .then((res) => {
-        setProducts(res?.data);
-        setLoading(false);
-        console.log(res?.data);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-      });
-  }
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
   return (
-    <div>
+    <div style={{ display: "flex", overflow: "hidden", background: "#1C1C28" }}>
+      <div>
+        {/* Sidebar */}
+        <Sidebar products={products} setProducts={setProducts}/>
+      </div>
 
-        <Sidebar />
-      {/* {!loading && products.length ? (
-        <Container>
-          {products?.map((item) => (
-            <Card>
-              <Items>
-                <IMG src={item?.image} alt="img" />
-              </Items>
-            </Card>
-          ))}
-        </Container>
+      {!loading && products.length ? (
+        <>
+          <Container>
+            {products?.map((item) => (
+              <Card>
+                <div className="img__container">
+                  <img className="product__img" src={item?.image} alt="img" loading="lazy"/>
+                </div>
+
+                <div className="product__details">
+                  <h3>{item?.company}</h3>
+
+                  <p className="product__name">{item?.productName}</p>
+
+                  <div className="products__price">
+                    <p style={{ marginRight: "0.75em" }}>
+                      Price : ₹{item?.price}
+                    </p>
+
+                    <p
+                      style={{
+                        textDecoration: "line-through",
+                        marginRight: "0.75em",
+                      }}
+                    >
+                      ₹{ DiscountedPrice(item.price, item.discount)}
+                    </p>
+
+                    <p style={{ color: "#EB4D4B" }}>({item?.discount}% off)</p>
+                  </div>
+                </div>
+
+                <div className="cart__container">
+                  <button>Add To Cart</button>
+                </div>
+              </Card>
+            ))}
+          </Container>
+        </>
       ) : (
         <p>...loading</p>
-      )} */}
+      )}
     </div>
   );
 };
@@ -50,44 +65,25 @@ const LandingPage = () => {
 export default LandingPage;
 
 const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1.5em;
+  margin: 2em 1em 0 0;
+  backgrund: #1c1c28;
+  color: #fff;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+  }
 
-  padding:1em;
-  margin: 2em 2.5em 0 2.5em;
-  display: flex;
-  flex-wrap: wrap;
-  border : 1px solid red;
-  flex : 90vh;
-
-
- 
-
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Card = styled.div`
-
-
-  height: 100%;
-
-  border-radius: 8px;
-
-  width: 40vh;
-
-  border: 1px solid rgb(240, 240, 240);
-
-  background : #fff;
-  margin: 1em;
-`;
-
-const Items = styled.div`
-
-height : 232px;
-
-
-`;
-
-const IMG = styled.img`
-object-fit: contain;
-height : 100%;
-width : 100%;
-
+  border-radius: 6px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #2d2e45;
 `;
