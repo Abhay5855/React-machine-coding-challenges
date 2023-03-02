@@ -16,3 +16,9 @@ img, picture {
      max-width: 100%;
      display: block;
 }
+
+.netflix-img {
+
+     width: 300px;
+     height: 300px;
+}
