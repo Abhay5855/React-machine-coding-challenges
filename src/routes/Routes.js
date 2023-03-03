@@ -2,9 +2,9 @@
 
 
 import React from 'react'
-import {BrowserRouter as Router , Route , Switch} from "react-router-dom";
+import {BrowserRouter as Router , Route} from "react-router-dom";
+import Time from '../challenge_6';
 import Container from '../ecommerse/container';
-import LandingPage from '../ecommerse/landing/LandingPage';
 import Signup from "../ecommerse/signup/Signup"
 import JobListing from '../react-practice/job-listing-challenge/JobListing';
 import NestedMap from '../react-practice/nested_map/NestedMap';
@@ -23,6 +23,7 @@ const Routes = () => {
         <Route exact path='/joblisting' component={JobListing} />
         <Route exact path='/netflix' component={Netflix} />
         <Route exact path='/slot' component={SlotMachine} />
+        <Route exact path='/time' component={Time} />
 
 
     </Router>
