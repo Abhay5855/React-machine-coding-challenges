@@ -9,6 +9,7 @@ import Signup from "../ecommerse/signup/Signup"
 import JobListing from '../react-practice/job-listing-challenge/JobListing';
 import NestedMap from '../react-practice/nested_map/NestedMap';
 import Netflix from '../react-practice/netflix-ui/Netflix';
+import SlotMachine from '../slot_machine/SlotMachine';
 
 const Routes = () => {
   return (
@@ -21,6 +22,7 @@ const Routes = () => {
         <Route exact path='/nested' component={NestedMap} />
         <Route exact path='/joblisting' component={JobListing} />
         <Route exact path='/netflix' component={Netflix} />
+        <Route exact path='/slot' component={SlotMachine} />
 
 
     </Router>
